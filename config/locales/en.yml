@@ -25,9 +25,11 @@ en:
   ror: "Ruby on Rails Tutorial "
   welcome: "Welcome to the Sample App"
   fail: "Fail to create new user, please check again!"
+  signin_validation_fail: "Invalid email/password combination"
   author: "Michael Hartl"
   news: "News"
   by: "by "
+  logout: "Log out"
   layouts:
     header:
         logo: "Sample App"
@@ -35,6 +37,10 @@ en:
           home: "Home"
           help: "Help"
           login: "Log in"
+          users: "Users"
+          account: "Account"
+          profile: "Profile"
+          settings: "Settings"
   shared:
     error_messages:
       sv:  "The form contains"
@@ -68,3 +74,8 @@ en:
   helpers:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
+  sessions:
+    new:
+      title: "Log in"
+      new_user: "New user? "
+      sign_up_now: "Sign Up Now"

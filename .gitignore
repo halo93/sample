@@ -53,3 +53,7 @@ build-iPhoneSimulator/
 log/*
 .byebug_history
 db/test.sqlite3
+app/assets/javascripts/*.coffee
+app/assets/stylesheets/sessions.scss
+app/assets/stylesheets/static_pages.scss
+app/assets/stylesheets/users.scss
