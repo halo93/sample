@@ -50,3 +50,6 @@ build-iPhoneSimulator/
 .rvmrc
 /.idea/*
 .idea/*
+log/*
+.byebug_history
+db/test.sqlite3

@@ -20,4 +20,51 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  book: "book "
+  and: "and "
+  ror: "Ruby on Rails Tutorial "
+  welcome: "Welcome to the Sample App"
+  fail: "Fail to create new user, please check again!"
+  author: "Michael Hartl"
+  news: "News"
+  by: "by "
+  layouts:
+    header:
+        logo: "Sample App"
+        menu:
+          home: "Home"
+          help: "Help"
+          login: "Log in"
+  shared:
+    error_messages:
+      sv:  "The form contains"
+      obj: "error"
+  static_pages:
+    about:
+      title: "About"
+      the: "The "
+      is_a: "is a "
+      screencast_series: "screencast series "
+      teach: "to teach web development with "
+      end: "This is the sample application for the tutorial."
+    contact:
+      title: "Contact"
+      desc: "Contact the Ruby on Rails Tutorial about the sample app at the"
+    help:
+      title: "Help"
+      get_help: "Get help on the Ruby on Rails Tutorial at the "
+      ror_section: "Rails Tutorial help section"
+      see: "To get help on this sample app, see the"
+    home:
+      desc: "This is the home page for the "
+      sample_app: "sample application."
+      signup: "Sign up now"
+  pages:
+    users:
+      new:
+        title: "Sign Up"
+        confirm: "Confirmation"
+        submit: "Create my account"
+  helpers:
+    application:
+      base_title: "Ruby on Rails Tutorial Sample App"
