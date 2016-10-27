@@ -57,3 +57,5 @@ app/assets/javascripts/*.coffee
 app/assets/stylesheets/sessions.scss
 app/assets/stylesheets/static_pages.scss
 app/assets/stylesheets/users.scss
+db/development.sqlite3
+db/production.sqlite3
