@@ -29,7 +29,10 @@ en:
   author: "Michael Hartl"
   news: "News"
   by: "by "
+  authorize_fail: "Please log in"
   logout: "Log out"
+  change: "change"
+  confirm: "You sure?"
   layouts:
     header:
         logo: "Sample App"
@@ -71,6 +74,17 @@ en:
         title: "Sign Up"
         confirm: "Confirmation"
         submit: "Create my account"
+      edit:
+        title: "Edit user"
+        head1: "Update your profile"
+        submit: "Update my account"
+        success: "Profile updated"
+      index:
+        title: "All users"
+      delete:
+        del: "delete"
+        success: "User deleted"
+        fail: "Failed to delete user"
   helpers:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"

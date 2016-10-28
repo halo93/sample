@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to user.name, user %></td>
+  <td><%= link_to user.email, user %></td>
+  <td><%= gravatar_for user, size: 50 %></td>
+  <td><%= link_to user.created_at, user %></td>
+  <td><%= link_to user.updated_at, user %></td>
+  <% if current_user.admin? && !current_user?(user) %>
+    <td><%= link_to t("pages.users.delete.del"), user, method: :delete, data: {confirm: t("confirm")} %></td>
+  <% else %>
+    <td></td>
+  <% end %>
+</tr>

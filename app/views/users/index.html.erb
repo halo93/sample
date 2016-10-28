@@ -1,0 +1,17 @@
+<% provide :title, t("pages.users.index.title") %>
+<h1><%= t "pages.users.index.title" %></h1>
+<%= will_paginate @users %>
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Avatar</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Option</th>
+  </thead>
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+</table>
+<%= will_paginate @users %>
