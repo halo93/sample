@@ -1,0 +1,7 @@
+<h1><%= t "layouts.header.logo" %></h1>
+
+<p><%= t "hi" %> <%= @user.name %>, </p>
+
+<p><%= t "welcome" %>! <%= t "mailers.activation_text.click" %>: </p>
+
+<%= link_to t("mailers.activation_text.activate"), edit_account_activation_url(@user.activation_token, email: @user.email) %>

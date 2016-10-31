@@ -33,6 +33,10 @@ en:
   logout: "Log out"
   change: "change"
   confirm: "You sure?"
+  hi: "Hi "
+  activated: "Account activated!"
+  activated_failed: "Invalid activation link"
+  info: "Please check your email to activate your account."
   layouts:
     header:
         logo: "Sample App"
@@ -94,3 +98,10 @@ en:
       new_user: "New user? "
       sign_up_now: "Sign Up Now"
       remember_me: "Remember me on this computer"
+      not_yet_activated: "Account not activated.
+                          Check your email for the activation link."
+  mailers:
+    subject_activation: "Account activation"
+    activation_text:
+      click: "Click on the link below to activate your account"
+      activate: "activate"
