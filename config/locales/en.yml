@@ -105,3 +105,24 @@ en:
     activation_text:
       click: "Click on the link below to activate your account"
       activate: "activate"
+  password_resets:
+    forgot: "(Forgot password?)"
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+      info: "Email sent with password reset instructions"
+      danger: "Email address not found!"
+    mailer:
+      subject: "Password Reset"
+      text:
+        click: "To reset your password click the link below:"
+        expiration: "This link will expire in two hours."
+        information: "If you did not request your password to be reset, please ignore this email and
+                     your password will stay as it is."
+      html:
+        reset: "Reset password"
+      edit:
+        submit: "Update password"
+    check_expiration: "Password reset has expired."
+    errors: "can't be empty"
+    success: "Password has been reset."

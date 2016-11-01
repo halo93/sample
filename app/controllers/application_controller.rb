@@ -17,4 +17,11 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+
+  protected
+  def verify_user
+    unless @user && @user.activated? && @user.authenticated?(:reset, params[:id])
+      redirect_to root_url
+    end
+  end
 end

@@ -60,3 +60,5 @@ app/assets/stylesheets/users.scss
 db/development.sqlite3
 db/production.sqlite3
 app/assets/stylesheets/account_activations.scss
+app/assets/stylesheets/password_resets.scss
+app/helpers/password_resets_helper.rb
