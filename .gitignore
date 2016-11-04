@@ -55,6 +55,7 @@ log/*
 db/test.sqlite3
 app/assets/javascripts/*.coffee
 app/assets/stylesheets/sessions.scss
+app/assets/stylesheets/microposts.scss
 app/assets/stylesheets/static_pages.scss
 app/assets/stylesheets/users.scss
 db/development.sqlite3
@@ -62,3 +63,6 @@ db/production.sqlite3
 app/assets/stylesheets/account_activations.scss
 app/assets/stylesheets/password_resets.scss
 app/helpers/password_resets_helper.rb
+app/helpers/microposts_helper.rb
+/public/uploads
+test/models/micropost_test.rb

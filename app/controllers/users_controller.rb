@@ -5,12 +5,10 @@ class UsersController < ApplicationController
   before_action :verify_correct_user, only: [:edit,:update]
 
   def index
-    per_page = 5
-    total_pages = User.count % per_page == 0 ? User.count / per_page
-                                             : User.count / per_page + 1
+    total_pages = total_pages User
     if total_pages >= params[:page].to_i
-      @users = retrieve_activated_users.paginate page: params[:page],
-        per_page: per_page
+      @users = new.retrieve_activated_users.paginate page: params[:page],
+        per_page: PER_PAGE
     else
       render file: "public/404.html", layout: false
     end
@@ -21,7 +19,13 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    total_pages = total_pages @user.microposts
+    if total_pages >= params[:page].to_i
+      @microposts = @user.microposts.paginate page: params[:page],
+        per_page: PER_PAGE
+    else
+      render file: "public/404.html", layout: false
+    end
   end
 
   def create

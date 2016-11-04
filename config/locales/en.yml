@@ -37,6 +37,7 @@ en:
   activated: "Account activated!"
   activated_failed: "Invalid activation link"
   info: "Please check your email to activate your account."
+  microposts: "Microposts"
   layouts:
     header:
         logo: "Sample App"
@@ -72,6 +73,7 @@ en:
       desc: "This is the home page for the "
       sample_app: "sample application."
       signup: "Sign up now"
+      feed: "Micropost feed"
   pages:
     users:
       new:
@@ -126,3 +128,16 @@ en:
     check_expiration: "Password reset has expired."
     errors: "can't be empty"
     success: "Password has been reset."
+  micropost:
+    posted: "Posted"
+    ago: "ago"
+    success: "Micropost created"
+    fail: "Failed to create micropost"
+    view: "View my profile"
+    text_area: "Compose new micropost..."
+    submit: "Post"
+    delete:
+      success: "Micropost deleted"
+    uploader:
+      validation: "should be less than 5Mb"
+      message: "Maximum file size is 5MB. Please choose a smaller file."
