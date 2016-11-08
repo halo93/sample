@@ -141,3 +141,9 @@ en:
     uploader:
       validation: "should be less than 5Mb"
       message: "Maximum file size is 5MB. Please choose a smaller file."
+  following_users:
+    following: "following"
+    followers: "followers"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    view: "View my profile"

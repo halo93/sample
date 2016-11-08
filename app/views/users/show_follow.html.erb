@@ -1,0 +1,40 @@
+<% provide :title, @title.upcase_first %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= gravatar_for @user %>
+      <h1><%= @user.name %></h1>
+      <span><%= link_to t("following_users.view"), @user %></span>
+      <span><b><%= t "microposts" %>:</b> <%= @user.microposts.count %></span>
+    </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
+      <% if @users.any? %>
+        <div class="user_avatars">
+          <% @users.each do |user| %>
+            <%= link_to gravatar_for(user, size: 30), user %>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3><%= @title.upcase_first %></h3>
+    <% if @users.any? %>
+      <table class="table table-striped">
+        <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Avatar</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+        <th>Option</th>
+        </thead>
+        <% @users.each do |user| %>
+          <%= render user %>
+        <% end %>
+      </table>
+    <% end %>
+    <%= will_paginate @users %>
+  </div>
+</div>
