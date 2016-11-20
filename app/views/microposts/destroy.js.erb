@@ -1,0 +1,3 @@
+$('#micropost-<%= @micropost.id %>').slideUp('slow');
+$('#user_posts h3').empty().html('<%= t "microposts" %> (<%= current_user.microposts.count %>)');
+$('.u-info span:first').empty().html('<%= pluralize current_user.microposts.count, t("microposts") %>');

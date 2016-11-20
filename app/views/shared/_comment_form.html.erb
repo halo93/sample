@@ -1,0 +1,5 @@
+<%= form_for [micropost, micropost.comments.build], remote: true do |f| %>
+  <%= f.text_area :content, class: "form-control",
+    placeholder: "Enter your comment", id: "comment_content_#{micropost.id}"%>
+  <%= f.submit "Comment", class: "btn btn-info" %>
+<% end %>

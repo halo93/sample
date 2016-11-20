@@ -1,0 +1,3 @@
+$('.comment-<%= @micropost.id %>').slideUp('slow');
+$('#micropost-<%= @micropost.id %> .row:last').before('<%= j render @comment %>');
+$('#comment_content_<%= @micropost.id %>').val('');

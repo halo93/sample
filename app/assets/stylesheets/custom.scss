@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 $gray-medium-light: #eaeaea;
 body {
@@ -190,8 +191,9 @@ input {
   list-style: none;
   padding: 0;
   li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    padding-top: 10px;
+    border: 1px solid #efefef;
+    margin-bottom: 50px;
   }
   .user {
     margin-top: 5em;
@@ -199,21 +201,24 @@ input {
   }
   .content {
     display: block;
-    margin-left: 60px;
     img {
       display: block;
-      padding: 5px 0;
+      padding: 0px;
+      max-width: 100%;
+    }
+    .main-content{
+      padding: 10px;
+      text-align: justify;
     }
   }
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
   }
   .gravatar {
     float: left;
     margin-right: 10px;
-    margin-top: 5px;
+    margin-top: 3px;
   }
 }
 
@@ -268,3 +273,79 @@ span.picture {
 .users.follow {
   padding: 0;
 }
+
+.btn-post{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+.btn-post span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-post span:after {
+  content: "\f030";
+  font-family: FontAwesome;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-post:hover span {
+  padding-right: 25px;
+}
+
+.btn-post:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.post-header{
+  margin-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+}
+
+.group{
+  border-top: 1px solid #efefef;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  .group-mem:first-child{
+      border-right: 1px solid #efefef;
+  }
+}
+
+.group-mem{
+  a:hover{
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.new-post{
+  display: none;
+}
+
+.micropost_form{
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  input{
+    border-radius: 0;
+  }
+  .btn-primary{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+

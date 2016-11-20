@@ -26,14 +26,26 @@ User.create!(name:  "Example User",
                activated_at: Time.zone.now)
 end
 users = User.order(:created_at).take 6
-50.times do
-  content = Faker::Lorem.sentence 5
-  users.each {|user| user.microposts.create! content: content}
+20.times do
+  content = Faker::Lorem.paragraphs 3, true
+  image = File.open(Dir.glob(File.join(Rails.root, "app/assets/images", "sample.jpg")).sample)
+  users.each {|user| user.microposts.create! content: content, picture: image}
 end
 
 users = User.all
 user  = users.first
-following = users[2..50]
-followers = users[3..40]
+following = users[2..20]
+followers = users[3..20]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+users_10 = users.limit 10
+users_10.each do |user|
+  my_microposts = user.microposts
+  user.followers.each do |follower|
+    content = Faker::Lorem.sentence 3
+    my_microposts.each do |micropost|
+      follower.comments.create! content: content, micropost_id: micropost.id
+    end
+  end
+end

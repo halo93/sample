@@ -1,18 +1,20 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render "shared/user_info" %>
-      </section>
-      <section class="stats">
-        <%= render "shared/stats" %>
-      </section>
-      <section class="micropost_form">
-        <%= render "shared/micropost_form" %>
-      </section>
-    </aside>
-    <div class="col-md-8">
-      <h3><%= t ".feed" %></h3>
+    <div class="col-md-6 col-md-offset-3">
+      <button class="btn btn-danger btn-post">
+        <span><%= t "post" %></span>
+      </button>
+      <div class="new-post">
+        <section class="user_info">
+          <%= render "shared/user_info" %>
+        </section>
+        <section class="stats">
+          <%= render "shared/stats" %>
+        </section>
+        <section class="micropost_form">
+          <%= render "shared/micropost_form" %>
+        </section>
+      </div>
       <%= render "shared/feed" %>
     </div>
   </div>
@@ -28,3 +30,10 @@
   </div>
   <%= link_to image_tag("rails.png", alt: "Rails logo"), "http://rubyonrails.org" %>
 <% end %>
+<script>
+  $(document).ready(function() {
+    $('.btn-post').click(function () {
+      $('.new-post').slideToggle('slow');
+    });
+  });
+</script>

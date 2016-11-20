@@ -1,23 +1,33 @@
 class MicropostsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
-  before_action :load_a_micropost, only: [:destroy]
-  
+  before_action :load_a_micropost, only: [:show, :destroy]
+
+  def show
+    @comments = @micropost.comments.paginate page: params[:page],
+      per_page: PER_PAGE
+  end
+
   def create
     @micropost = current_user.microposts.build micropost_params
     if @micropost.save
       flash[:success] = t "micropost.success"
-      redirect_to root_url
     else
       @feed_items = feed_list
       flash[:warning] = t "micropost.fail"
-      render "static_pages/home"
+    end
+    respond_to do |format|
+      format.html {redirect_to request.referrer || root_url}
+      format.js
     end
   end
 
   def destroy
     @micropost.destroy
     flash[:success] = t "micropost.delete.success"
-    redirect_to request.referrer || root_url
+    respond_to do |format|
+      format.html {redirect_to request.referrer || root_url}
+      format.js
+    end
   end
 
   private
@@ -26,7 +36,7 @@ class MicropostsController < ApplicationController
   end
 
   def load_a_micropost
-    @micropost = current_user.microposts.find_by id: params[:id]
+    @micropost = Micropost.find_by id: params[:id]
     redirect_to root_url if @micropost.nil?
   end
 end
