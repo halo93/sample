@@ -38,6 +38,7 @@ en:
   activated_failed: "Invalid activation link"
   info: "Please check your email to activate your account."
   microposts: "Microposts"
+  post: "Post a new photo"
   layouts:
     header:
         logo: "Sample App"
@@ -147,3 +148,6 @@ en:
     follow: "Follow"
     unfollow: "Unfollow"
     view: "View my profile"
+  comments:
+    invalid: "Comment invalid"
+    deleted: "Delete a comment successfully"

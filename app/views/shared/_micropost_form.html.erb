@@ -1,7 +1,7 @@
-<%= form_for @micropost, html: {multipart:true} do |f| %>
+<%= form_for @micropost, html: {multipart:true}, remote: true do |f| %>
   <%= render "shared/error_messages", object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: t("micropost.text_area") %>
+    <%= f.text_area :content, rows: 10, placeholder: t("micropost.text_area") %>
   </div>
   <%= f.submit t("micropost.submit"), class: "btn btn-primary" %>
   <span class="picture">
@@ -13,7 +13,7 @@
   $('#micropost_picture').on('change', function(){
     var size_in_megabytes = this.file[0].size/1024/1024;
     if (size_in_megabytes > 5){
-      alert(<%= t "micropost.uploader.message" %>);
+      alert('<%= t "micropost.uploader.message" %>');
     }
   })
 </script>

@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def show
     total_pages = total_pages @user.microposts
     if total_pages >= params[:page].to_i
-      @microposts = @user.microposts.paginate page: params[:page],
+      @microposts = @user.microposts.order_by_creation_time.paginate page: params[:page],
         per_page: PER_PAGE
     else
       render file: "public/404.html", layout: false
